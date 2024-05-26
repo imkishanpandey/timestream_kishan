@@ -1,0 +1,38 @@
+.pagination button {
+  color: #495057;
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px 0px 20px 0px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: fit-content;
+  height: 191px;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  max-height: 82vh;
+  overflow: scroll;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
