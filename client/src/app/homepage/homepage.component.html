@@ -1,0 +1,27 @@
+<h1>Chemical Listing</h1>
+<div class="card-wrapper">
+  <div
+    class="card-list"
+    *ngFor="
+      let data of rows
+        | slice : currentPage * rowPerPage : (currentPage + 1) * rowPerPage
+    "
+  >
+    <app-card [routerLink]="['detail', data.chemical_id]" [compound]="data" [random]="data"></app-card>  <!--this is one card -->
+  </div>
+</div>
+
+<div class="pagination">
+  <button
+    [disabled]="currentPage === 0"
+    (click)="currentPage = currentPage - 1"
+  >
+    Previous
+  </button>
+  <button
+    [disabled]="currentPage === totalPages"
+    (click)="currentPage = currentPage + 1"
+  >
+    Next
+  </button>
+</div>
